@@ -2,6 +2,9 @@ import IllustrationImg from '../assets/images/illustration.svg';
 import logoImg from '../assets/images/logo.svg';
 import googleIconImg from '../assets/images/google-icon.svg';
 
+import { Button } from '../components/Button';
+
+
 import '../styles/auth.scss';
 
 export function Home() {
@@ -25,9 +28,9 @@ export function Home() {
                             type="text"
                             placeholder='Enter a room code'
                         />
-                        <button type="submit">
+                        <Button type="submit">
                             Enter a room
-                        </button>
+                        </Button>
                     </form>
                 </div>
             </main>
