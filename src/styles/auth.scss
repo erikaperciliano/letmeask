@@ -1,3 +1,10 @@
+$text-yellow-color: #fcde67;
+$text-black-color: #000;
+$text-blue-color:  #5bccf6;
+$text-orange-color: #ea7c01;
+$input-black-color:#0b0a0a;
+
+
 #page-auth {
     display: flex;
     align-items: stretch;
@@ -6,8 +13,8 @@
     aside {
         flex: 7;
 
-        background: #000;
-        color: #fcde67;
+        background: $text-black-color;
+        color: $text-yellow-color;
 
         display: flex;
         flex-direction: column;
@@ -41,7 +48,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: #5bccf6;
+        background: $text-blue-color;
     }
 
     .main-content {
@@ -67,8 +74,8 @@
                 height: 50px;
                 border-radius: 8px;
                 padding: 0 16px;
-                background: #0b0a0a;
-                border: 1px solid #0b0a0a;
+                background: $input-black-color;
+                border: 1px solid $input-black-color;
             }
 
             ::placeholder {
@@ -133,7 +140,7 @@
             content: '';
             flex: 1;
             height: 1px;
-            background: #ea7c01;
+            background: $text-orange-color;
             margin-right: 16px;
         }
 
@@ -141,7 +148,7 @@
             content: '';
             flex: 1;
             height: 1px;
-            background: #ea7c01;
+            background: $text-orange-color;
             margin-left: 16px;
         }
     }
