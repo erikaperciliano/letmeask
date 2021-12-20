@@ -1,19 +1,24 @@
-import { useNavigate } from 'react-router-dom';
-
 import IllustrationImg from '../assets/images/illustration.svg';
 import logoImg from '../assets/images/logo.svg';
 import googleIconImg from '../assets/images/google-icon.svg';
 
 import { Button } from '../components/Button';
 
+import { auth, firebase } from '../services/firebase';
 
 import '../styles/auth.scss';
 
 export function Home() {
-    const history = useNavigate();
+    // const history = useNavigate();
 
     function navigateToNewRoom () {
-        history('/rooms/new');
+        const provider = new firebase.auth.GoogleAuthProvider();
+
+        auth.signInWithPopup(provider).then(result => {
+            console.log('result: ', result);
+        })
+
+        // history('/rooms/new');
     }
 
     return (
