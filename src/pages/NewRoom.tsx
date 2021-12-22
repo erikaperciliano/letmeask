@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { TestContext } from '../App';
+import { AuthContext } from '../App';
 
 import IllustrationImg from '../assets/images/illustration.svg';
 import logoImg from '../assets/images/logo.svg';
@@ -8,11 +8,11 @@ import logoImg from '../assets/images/logo.svg';
 import { Button } from '../components/Button';
 
 
-
 import '../styles/auth.scss';
 
 export function NewRoom() {
-    const value = useContext(TestContext);
+    const { user } = useContext(AuthContext);
+    console.log('user: ', user)
 
     return (
         <div id="page-auth">
@@ -22,9 +22,9 @@ export function NewRoom() {
                 <p>Ask your audience's questions in real-time</p>
             </aside>
             <main>
-                <h1>{value}</h1>
                 <div className='main-content'>
                     <img src={logoImg} alt="Letmeask" />
+                    <h1>{user?.name}</h1>
                     <h2>Create a new room</h2>
                     <form>
                         <input 
