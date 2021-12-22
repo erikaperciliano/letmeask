@@ -12,7 +12,6 @@ import '../styles/auth.scss';
 
 export function NewRoom() {
     const { user } = useContext(AuthContext);
-    console.log('user: ', user)
 
     return (
         <div id="page-auth">
