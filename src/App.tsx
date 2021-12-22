@@ -29,7 +29,7 @@ function App() {
 
   useEffect(() => {
     //checks at firebase if exist user
-    auth.onAuthStateChanged(user => {
+    const unsubscribe =  auth.onAuthStateChanged(user => {
       if(user) {
         const { displayName, photoURL, uid } = user;
 
@@ -44,6 +44,10 @@ function App() {
         })
       }
     })
+
+    return () => {
+      unsubscribe();
+    }
   },[])
 
   async function signInWithGoogle() {
