@@ -3,6 +3,7 @@ $text-black-color: #000;
 $text-blue-color:  #5bccf6;
 $text-orange-color: #ea7c01;
 $input-black-color:#0b0a0a;
+$input-with-color: #fff;
 
 
 #page-auth {
@@ -76,6 +77,7 @@ $input-black-color:#0b0a0a;
                 padding: 0 16px;
                 background: $input-black-color;
                 border: 1px solid $input-black-color;
+                color: $input-with-color;
             }
 
             ::placeholder {
@@ -108,7 +110,7 @@ $input-black-color:#0b0a0a;
         border-radius: 8px;
         font-weight: 500;
         background: #fcde67;
-        color: #fff;
+        color: $input-with-color;
 
         display: flex;
         justify-content: center;
