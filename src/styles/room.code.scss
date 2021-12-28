@@ -1,16 +1,19 @@
+
+$text-yellow-color: #fcde67;
+
 .room-code {
     height: 40px;
     border-radius: 8px;
     overflow: hidden;
 
-    background: #fff;
-    border: 1px solid #835afd;
+    background: $text-yellow-color;
+    border: 1px solid $text-yellow-color;
     cursor: pointer;
 
     display: flex;
 
     div {
-        background: #835afd;
+        background: #5bccf6;
         padding: 0 12px;
         display: flex;
         justify-content: center;
