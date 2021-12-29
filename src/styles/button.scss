@@ -1,9 +1,11 @@
+$with-color: #fff;
+
 .button {
     height: 58px;
     border-radius: 8px;
     font-weight: 500;
     background: #e88617;
-    color: #fff;
+    color: $with-color;
     padding: 0 32px;
 
     display: flex;
@@ -17,6 +19,12 @@
 
     img {
         margin-right: 8px;
+    }
+
+    &.outlined {
+        background: #fcde67;
+        border: 1px solid #000;
+        color: #000;
     }
 
     &:hover {
