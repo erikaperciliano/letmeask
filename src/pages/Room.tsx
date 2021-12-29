@@ -28,7 +28,7 @@ type Question = {
     }
     content: string;
     isAnswered: boolean;
-    isHighlighted: boolean;
+    isHightlighted: boolean;
 }
 
 type RoomParams = {
@@ -65,7 +65,7 @@ export function Room() {
             })
 
             setTitles(databaseRoom.title);
-            setQuestions(parsedQuestions)
+            setQuestions(parsedQuestions);
         })
     }, [roomId]);
 
