@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import logoImage from '../assets/images/logo.svg';
 import { Button } from '../components/Button';
 import { RoomCode } from '../components/RoomCode';
+import { useAuth } from '../hooks/useAuth';
 
 import '../styles/room.scss';
 import { Question } from '../components/Question';
