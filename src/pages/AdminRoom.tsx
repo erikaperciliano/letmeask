@@ -1,10 +1,8 @@
-import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import logoImage from '../assets/images/logo.svg';
 import { Button } from '../components/Button';
 import { RoomCode } from '../components/RoomCode';
-import { useAuth } from '../hooks/useAuth';
 
 import '../styles/room.scss';
 import { Question } from '../components/Question';
@@ -16,9 +14,7 @@ type RoomParams = {
 }
 
 export function AdminRoom() {
-    const { user } = useAuth();
     const params = useParams<RoomParams>();
-    const [newQuestion, setNewQuestion] = useState('');
     const roomId = params.id;
 
     const { title, questions} = useRoom(roomId!);
