@@ -41,6 +41,18 @@ export function AdminRoom() {
         }
     }
 
+    async function handlCheckQuestionAnswered(questionId: string) {
+        await database.ref(`rooms/${roomId}/questions/${questionId}`).update({
+            isAnswered: true
+        });
+    }
+
+    async function handleHighlightQuestion(questionId: string) {
+        await database.ref(`rooms/${roomId}/questions/${questionId}`).update({
+            isHighlighted: true
+        });
+    }
+
     return(
         <div id="page-room">
             <header>
@@ -65,25 +77,32 @@ export function AdminRoom() {
                             key={question.id}
                             content={question.content}
                             author={question.author}
+                            isAnswered={question.isAnswered}
+                            isHighlighted={question.isHightlighted}
                         >
-                            <button
-                                type='button'
-                                onClick={() => handleDeleteQuestion(question.id)}
-                            >
-                                <img src={deleteImage} alt="Delete ask" />
-                            </button>
-                            <button
-                                type='button'
-                                onClick={() => handleDeleteQuestion(question.id)}
-                            >
-                                <img src={checkImage} alt="Delete ask" />
-                            </button>
-                            <button
-                                type='button'
-                                onClick={() => handleDeleteQuestion(question.id)}
-                            >
-                                <img src={answerImage} alt="Delete ask" />
-                            </button>
+                            { !question.isAnswered &&
+                                (
+                                    <>
+                                        <button
+                                            type='button'
+                                            onClick={() => handlCheckQuestionAnswered(question.id)}
+                                        >
+                                            <img src={checkImage} alt="Mark question as answered" />
+                                        </button>
+                                        <button
+                                            type='button'
+                                            onClick={() => handleHighlightQuestion(question.id)}
+                                        >
+                                            <img src={answerImage} alt="Highlight the question" />
+                                        </button>
+                                    </>
+                                )}
+                                <button
+                                    type='button'
+                                    onClick={() => handleDeleteQuestion(question.id)}
+                                >
+                                    <img src={deleteImage} alt="Delete ask" />
+                                </button>
                         </Question>
                     );
                 })}
