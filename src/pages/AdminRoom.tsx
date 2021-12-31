@@ -2,6 +2,8 @@ import { useNavigate, useParams } from 'react-router-dom';
 
 import logoImage from '../assets/images/logo.svg';
 import deleteImage from '../assets/images/delete.svg';
+import checkImage from '../assets/images/check.svg';
+import answerImage from '../assets/images/answer.svg';
 
 import { Button } from '../components/Button';
 import { RoomCode } from '../components/RoomCode';
@@ -69,6 +71,18 @@ export function AdminRoom() {
                                 onClick={() => handleDeleteQuestion(question.id)}
                             >
                                 <img src={deleteImage} alt="Delete ask" />
+                            </button>
+                            <button
+                                type='button'
+                                onClick={() => handleDeleteQuestion(question.id)}
+                            >
+                                <img src={checkImage} alt="Delete ask" />
+                            </button>
+                            <button
+                                type='button'
+                                onClick={() => handleDeleteQuestion(question.id)}
+                            >
+                                <img src={answerImage} alt="Delete ask" />
                             </button>
                         </Question>
                     );
