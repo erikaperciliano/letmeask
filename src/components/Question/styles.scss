@@ -1,5 +1,6 @@
 $text-orange-color: #ea7c01;
-
+$text-purple-color: #835afd;
+$text-gray-color:#29292e;
 
 .question {
     background: #5bccf6;
@@ -8,8 +9,26 @@ $text-orange-color: #ea7c01;
     padding: 24px;
     margin-top: 32px;
 
+    // after the first question, all the question receive this
+    & + .question {
+        margin-top: 8px;
+    }
+
+    &.highlighted {
+        background: #f4f0ff;
+        border: 1px solid $text-purple-color;
+
+        footer .user-info span {
+            color: $text-gray-color;
+        }
+    }
+    
+    &.answered {
+        background: #5bf6a7;
+    }
+
     p {
-        color: #29292e;
+        color: $text-gray-color;
     }
 
     footer {
@@ -18,12 +37,6 @@ $text-orange-color: #ea7c01;
         align-items: center;
         margin-top: 24px;
 
-        // after the first question, all the question receive this
-        & + .question {
-            margin-top: 8px;
-        }
-
-        
         .user-info {
             display: flex;
             align-items: center;
@@ -41,6 +54,11 @@ $text-orange-color: #ea7c01;
             }
         }
 
+        > div {
+            display: flex;
+            gap: 16px;
+        }
+
         button {
             border: 0;
             background: transparent;
@@ -53,10 +71,10 @@ $text-orange-color: #ea7c01;
                 gap: 8px;
 
                 &.liked {
-                    color: #835afd;
+                    color: $text-purple-color;
 
                     svg path {
-                        stroke: #835afd;
+                        stroke: $text-purple-color;
                     }
                 }
             }
