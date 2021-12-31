@@ -19,10 +19,6 @@ Firebase ⚛️❤️ <br />
 Typescript 🦕
 
 # Result 🤓
-<p align="center" t>
-  <img src="ifood.gif" />
-</p>
-
 Project link in production: https://letmeask-5b829.web.app/
 
 # How to get this repository? 🤔
