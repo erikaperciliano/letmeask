@@ -3,7 +3,7 @@
 This is a project where the user can log into the application using google to create or enter a question and answer room.
 
 The owner of the room will have access to all questions and/or can close the room and a regular user has access to a textarea to be able to submit questions.<br /><br />
-A Front-end application made with React JS and Firebase 🚀 <br />
+A Front-end application made with React JS, TypeScript and Firebase 🚀 <br />
 
 <p align="center" t>
   <img src="https://letmeask-5b829.web.app/static/media/logo.a88331cb.svg" />
